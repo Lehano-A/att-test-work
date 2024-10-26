@@ -1,0 +1,119 @@
+@use '../palette/palette' as *;
+@use '../abstracts//mixins/all' as *;
+
+.dashboard-sidebar {
+  width: 249px;
+  height: 100vh;
+  border-right: 1px $gray-300 solid;
+
+  &__logo {
+    margin: 33px 22px 60px 43px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      &_active {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(-50% - 4px);
+          left: 0;
+          display: inline-block;
+          width: 6px;
+          height: 60px;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          background-color: $secondary-main;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: 'Inter Medium';
+    font-size: 1.8rem;
+    color: $gray-500;
+    text-decoration: none;
+
+    &_active {
+      color: $secondary-main;
+    }
+  }
+
+  #dashboardLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/home-2.svg');
+    }
+  }
+
+  #transactionsLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/transfer-1.svg');
+    }
+  }
+
+  #accountsLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/user-1.svg');
+    }
+  }
+
+  #investmentsLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/economic-investment-1.svg');
+    }
+  }
+
+  #creditCardsLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/credit-card-1.svg');
+    }
+  }
+
+  #loansLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/loan-1.svg');
+    }
+  }
+
+  #servicesLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/service-1.svg');
+    }
+  }
+
+  #myPrivilegesLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/econometrics-1.svg');
+    }
+  }
+
+  #settingLink {
+    &::before {
+      @include icon-aside-link-dashboard;
+      background-image: url('../../images/Components/Aside/settings-solid-1.svg');
+    }
+  }
+}
