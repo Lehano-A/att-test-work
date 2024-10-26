@@ -1,10 +1,17 @@
 import React from 'react'
 import DashboardSidebar from '../DashboardSidebar/DashboardSidebar';
+import Header from '../Header/Header';
 
 function App() {
 
   return (
-    <DashboardSidebar />
+    <>
+      <DashboardSidebar />
+
+      <div>
+        <Header />
+      </div>
+    </>
   );
 }
 
