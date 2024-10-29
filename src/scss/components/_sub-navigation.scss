@@ -1,40 +1,37 @@
 @use '../palette/palette' as *;
 
 .sub-navigation {
+  max-width: 285px;
+  width: 100%;
   margin-bottom: 52px;
+  align-self: center;
 
   & > :where(ul) {
     display: flex;
-    height: 30px;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    height: 24px;
     list-style: none;
     font-family: 'Inter Medium';
     font-size: 1.6rem;
+    text-wrap: nowrap;
+    margin: 0;
+    padding: 0;
     border-bottom: 1px $gray-150 solid;
 
     & > :where(li) {
-      &:nth-child(1) {
-        margin-right: 40px;
-      }
-
-      &:where(:nth-child(2)) {
-        margin-right: 45px;
-      }
-
       & > :where(a) {
-        padding: 0 16px;
         color: #718ebf;
         text-decoration: none;
+        padding: 0 16px;
       }
     }
   }
 
   &__link_active {
-    color: $secondary-main;
     position: relative;
     display: block;
     padding-bottom: 12px;
+    color: $secondary-main;
 
     &::before {
       content: '';
@@ -48,6 +45,26 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
       background-color: $secondary-main;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .sub-navigation {
+    & > :where(ul) {
+      font-size: 1.3rem;
+
+      & > :where(li) > :where(a) {
+        padding: 0 6px 6px;
+      }
+    }
+
+    &__link_active {
+      padding-bottom: 9px;
+
+      &::before {
+        height: 2px;
+      }
     }
   }
 }

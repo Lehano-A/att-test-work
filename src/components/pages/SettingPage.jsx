@@ -1,26 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FormEditProfile from '../FormEditProfile/FormEditProfile';
 import SubNavigation from '../SubNavigation/SubNavigation';
+import navigateTo from '../../helpers/navigateTo';
 
 const PATHNAME = '/setting'
 
 const links = [
   { name: "Edit Profile", id: "editProfileLink", href: "edit-profile" },
-  { name: "Preferences", id: "preferencesLink", href: "preferences" },
+  { name: "Preference", id: "preferenceLink", href: "preference" },
   { name: "Security", id: "securityLink", href: "security" }
 ]
 
 function SettingPage() {
 
-  const [currentLink, setCurrentLink] = useState("edit-profile")
+  const [currentSubSegment, setCurrentSubSegment] = useState("edit-profile")
+
+  useEffect(() => {
+    navigateTo(`${PATHNAME}/${currentSubSegment}`)
+  }, [])
 
   const handleOnClickLink = (e) => {
     e.preventDefault()
 
     const targetLink = links.find((item) => (e.target.id === item.id))
-    setCurrentLink(targetLink.href)
 
-    window.history.pushState(null, null, `${PATHNAME}/${targetLink.href}`)
+    setCurrentSubSegment(targetLink.href)
+    navigateTo(`${PATHNAME}/${targetLink.href}`)
   }
 
   return (
@@ -34,7 +39,7 @@ function SettingPage() {
                 <a
                   id={item.id}
                   href={item.href}
-                  className={currentLink === item.href ? "sub-navigation__link_active" : ""}
+                  className={currentSubSegment === item.href ? "sub-navigation__link_active" : ""}
                   onClick={handleOnClickLink}
                 >
                   {item.name}

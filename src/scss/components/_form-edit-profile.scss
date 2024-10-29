@@ -2,6 +2,8 @@
 
 .form-edit-profile {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__avatar-box {
     position: relative;
@@ -11,7 +13,6 @@
   }
 
   &__avatar {
-    display: inline-block;
     width: 130px;
     border-radius: 50%;
   }
@@ -36,6 +37,7 @@
       height: 15px;
       background-image: url('../../images/Components/ContentView/pencil-1.svg');
       background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 
@@ -93,6 +95,88 @@
     & > #country {
       grid-column: 2;
       grid-row: 5;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .form-edit-profile {
+    &__avatar-box {
+      width: 170px;
+      height: 170px;
+      margin: 0 4px 23px 0;
+    }
+
+    &__avatar {
+      width: 170px;
+      height: 170px;
+    }
+
+    &__button-edit-avatar {
+      bottom: 20px;
+      right: -5px;
+      width: 38.64px;
+      height: 38.64px;
+
+      &::before {
+        width: 18.55px;
+        height: 18.55px;
+      }
+    }
+
+    &__inputs-box {
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+
+      & > #yourName {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      & > #email {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      & > #dateOfBirth {
+        grid-column: 1;
+        grid-row: 5;
+      }
+
+      & > #permanentAddress {
+        grid-column: 1;
+        grid-row: 7;
+      }
+
+      & > #postalCode {
+        grid-column: 1;
+        grid-row: 9;
+      }
+
+      & > #userName {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      & > #password {
+        grid-column: 1;
+        grid-row: 4;
+      }
+
+      & > #presentAddress {
+        grid-column: 1;
+        grid-row: 6;
+      }
+
+      & > #city {
+        grid-column: 1;
+        grid-row: 8;
+      }
+
+      & > #country {
+        grid-column: 1;
+        grid-row: 10;
+      }
     }
   }
 }

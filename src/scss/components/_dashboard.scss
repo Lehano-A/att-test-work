@@ -1,13 +1,25 @@
 @use '../palette/palette' as *;
 @use '../abstracts//mixins/all' as *;
 
-.dashboard-sidebar {
+.dashboard {
   width: 249px;
   height: 100vh;
   border-right: 1px $gray-300 solid;
 
   &__logo {
+    width: 183px;
+    height: 36px;
     margin: 33px 22px 60px 43px;
+  }
+
+  &__button-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../images/Components/Dashboard/close.svg');
   }
 
   &__list {
@@ -114,6 +126,17 @@
     &::before {
       @include icon-aside-link-dashboard;
       background-image: url('../../images/Components/Aside/settings-solid-1.svg');
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .dashboard {
+    margin: 0 auto;
+    border-right: none;
+
+    &_hidden {
+      display: none;
     }
   }
 }
