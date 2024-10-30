@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/att-test-work/static/css/main.76f2e2e8.css",
-    "main.js": "/att-test-work/static/js/main.4887af8a.js",
+    "main.css": "/att-test-work/static/css/main.76a2dd7c.css",
+    "main.js": "/att-test-work/static/js/main.275be217.js",
     "static/media/Inter-SemiBold.woff": "/att-test-work/static/media/Inter-SemiBold.7f6c3678e245486167d9.woff",
     "static/media/Inter-Medium.woff": "/att-test-work/static/media/Inter-Medium.44e343ff76a98508d309.woff",
     "static/media/Inter-Regular.woff": "/att-test-work/static/media/Inter-Regular.0d6f7c99e635f1fec4c9.woff",
@@ -27,11 +27,11 @@
     "static/media/magnifying-glass-1.svg": "/att-test-work/static/media/magnifying-glass-1.b77e3f5c184411c17e9e.svg",
     "static/media/close.svg": "/att-test-work/static/media/close.7f59e1da9732ceff879d.svg",
     "static/media/arrow-1.svg": "/att-test-work/static/media/arrow-1.007687d741aa46a3921b.svg",
-    "main.76f2e2e8.css.map": "/att-test-work/static/css/main.76f2e2e8.css.map",
-    "main.4887af8a.js.map": "/att-test-work/static/js/main.4887af8a.js.map"
+    "main.76a2dd7c.css.map": "/att-test-work/static/css/main.76a2dd7c.css.map",
+    "main.275be217.js.map": "/att-test-work/static/js/main.275be217.js.map"
   },
   "entrypoints": [
-    "static/css/main.76f2e2e8.css",
-    "static/js/main.4887af8a.js"
+    "static/css/main.76a2dd7c.css",
+    "static/js/main.275be217.js"
   ]
 }
