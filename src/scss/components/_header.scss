@@ -1,6 +1,8 @@
 @use '../palette/palette' as *;
 @use '../abstracts/mixins/all' as *;
 
+$position-icon-button-control: calc(50% - 1px);
+
 .header {
   width: 100%;
   min-height: 100px;
@@ -11,7 +13,7 @@
     justify-self: start;
     height: 18px;
     width: 18px;
-    margin-bottom: 1px;
+    margin-bottom: 4px;
 
     &::before {
       content: '';
@@ -26,8 +28,8 @@
 
   &__title {
     font-family: 'Inter SemiBold';
-    margin: 2px 0 0;
     color: $primary-main;
+    margin: 0;
   }
 
   &__form-search {
@@ -75,12 +77,15 @@
       &::before {
         @include icon-button-control;
         background-image: url('../../images/Components/Header/setting-1.svg');
+        background-position: $position-icon-button-control
+          $position-icon-button-control;
       }
     }
     &_notification {
       &::before {
         @include icon-button-control;
         background-image: url('../../images/Components/Header/notification-1.svg');
+        background-position-y: $position-icon-button-control;
       }
     }
 
@@ -98,11 +103,11 @@
   .header {
     display: grid;
     grid-template-columns: repeat(3, max-content);
-    grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
     justify-items: center;
-    padding: 25px 25px 20px;
-    row-gap: 18px;
+    align-items: center;
+    padding: 28px 25px 20px;
+    row-gap: 17px;
 
     &__title {
       font-size: 2rem;
@@ -127,6 +132,10 @@
       height: 16px;
     }
 
+    &__box-controls {
+      justify-self: end;
+    }
+
     &__item-control {
       :where(&_setting, &_notification) {
         display: none;
@@ -146,7 +155,7 @@
     grid-template-rows: 1fr;
     justify-content: normal;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 40px 1px;
 
     &__title {
       font-size: 2.8rem;
