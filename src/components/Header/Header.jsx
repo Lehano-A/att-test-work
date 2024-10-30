@@ -1,6 +1,6 @@
 import React from 'react';
 
-import avatarProfile from '../../images/Components/Header/avatar.png';
+import avatarProfile from '../../images/avatar.jpg';
 
 function Header({ isSmallScreen, changeVisibleDashboard }) {
   return (
