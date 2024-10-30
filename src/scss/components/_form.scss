@@ -6,8 +6,6 @@
   & label {
     display: flex;
     flex-direction: column;
-    height: 80px;
-    font-size: 1.6rem;
     color: $gray-900;
   }
 
@@ -15,11 +13,6 @@
   select {
     min-width: 190px;
     width: 100%;
-    height: 50px;
-    font-size: 1.5rem;
-    border-radius: 15px;
-    padding: 0 19px;
-    margin-top: 11px;
     color: $primary-400;
     border: 1px $gray-350 solid;
   }
@@ -29,20 +22,13 @@
     appearance: none;
     background-image: url('../../images/Components/ContentView/arrow-1.svg');
     background-repeat: no-repeat;
-    background-size: 14px 9px;
-    background-position: calc(100% - 24px) center;
   }
 
   &__button-submit {
-    width: 190px;
-    height: 50px;
-    font-size: 1.8rem;
-    border-radius: 15px;
-    margin-top: 30px;
     align-self: flex-end;
-    background-color: $secondary-main;
     font-family: 'Inter Medium';
     color: $white;
+    background-color: $secondary-main;
   }
 }
 
@@ -74,6 +60,37 @@
       border-radius: 9px;
       margin-top: 19px;
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .form {
+    & label {
+      height: 80px;
+      font-size: 1.6rem;
+    }
+
+    & input,
+    select {
+      height: 50px;
+      font-size: 1.5rem;
+      border-radius: 15px;
+      padding: 0 19px;
+      margin-top: 11px;
+    }
+
+    & select {
+      background-size: 14px 9px;
+      background-position: calc(100% - 24px) center;
+    }
+
+    &__button-submit {
+      width: 190px;
+      height: 50px;
+      font-size: 1.8rem;
+      border-radius: 15px;
+      margin-top: 30px;
     }
   }
 }

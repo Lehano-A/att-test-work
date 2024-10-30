@@ -3,8 +3,6 @@
 
 .dashboard {
   width: 249px;
-  height: 100vh;
-  border-right: 1px $gray-300 solid;
 
   &__logo {
     width: 183px;
@@ -138,5 +136,11 @@
     &_hidden {
       display: none;
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dashboard {
+    border-right: 1px $gray-300 solid;
   }
 }

@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import FormEditProfile from '../FormEditProfile/FormEditProfile';
 import SubNavigation from '../SubNavigation/SubNavigation';
-import navigateTo from '../../helpers/navigateTo';
-
-const PATHNAME = '/setting'
 
 const links = [
   { name: "Edit Profile", id: "editProfileLink", href: "edit-profile" },
@@ -12,12 +9,7 @@ const links = [
 ]
 
 function SettingPage() {
-
   const [currentSubSegment, setCurrentSubSegment] = useState("edit-profile")
-
-  useEffect(() => {
-    navigateTo(`${PATHNAME}/${currentSubSegment}`)
-  }, [])
 
   const handleOnClickLink = (e) => {
     e.preventDefault()
@@ -25,11 +17,10 @@ function SettingPage() {
     const targetLink = links.find((item) => (e.target.id === item.id))
 
     setCurrentSubSegment(targetLink.href)
-    navigateTo(`${PATHNAME}/${targetLink.href}`)
   }
 
   return (
-    <div className='setting'>
+    <div className='setting-page'>
 
       <SubNavigation>
         <ul >

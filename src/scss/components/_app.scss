@@ -1,5 +1,8 @@
+@use '../palette/palette' as *;
+
 .app__major-box {
   display: block;
+  background-color: $gray-200;
 
   &_hidden {
     display: none;

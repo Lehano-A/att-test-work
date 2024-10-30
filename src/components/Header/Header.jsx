@@ -7,20 +7,24 @@ function Header({ isSmallScreen, changeVisibleDashboard }) {
       {isSmallScreen && <button className='header__button-menu' onClick={changeVisibleDashboard} />}
       <h1 className='header__title'>Setting</h1>
 
-      <search>
+
+      <search className='header__search'>
         <form className='header__form-search'>
           <input className='header__input-search' placeholder='Search for something' />
           <button className='header__button-search' />
         </form>
       </search>
 
-      <button className='header__item-control header__item-control_setting' />
-      <button className='header__item-control header__item-control_notification' />
 
-      <a className='header__item-control header__item-control_profile' href="profile">
-        <img src={avatarProfile} alt="Изображение профиля пользователя" />
-      </a>
+      <div className='header__box-controls'>
+        <button className='header__item-control header__item-control_setting' />
+        <button className='header__item-control header__item-control_notification' />
 
+
+        <button className='header__item-control header__item-control_profile' href="profile">
+          <img src={avatarProfile} alt="Изображение профиля пользователя" />
+        </button>
+      </div>
     </header>
   );
 };

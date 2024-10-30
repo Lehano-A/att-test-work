@@ -41,7 +41,7 @@ function App() {
           isSmallScreen={isSmallScreen}
           changeVisibleDashboard={changeVisibleDashboard}
         />
-        <Main />
+        <Main/>
       </div>
     </>
   );

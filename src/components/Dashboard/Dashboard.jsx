@@ -16,14 +16,14 @@ const links = [
 
 function Dashboard({ isSmallScreen, isHiddenDashboard, changeVisibleDashboard }) {
 
-  const [currentMainSegment, setCurrentMainSegment] = useState('setting')
+  const [sidebarSegment, setSidebarSegment] = useState('setting')
 
   const handleOnClickListItem = (e) => {
     e.preventDefault();
 
     links.find((item) => {
       if (item.id === e.target.id) {
-        setCurrentMainSegment(item.href)
+        setSidebarSegment(item.href)
       }
     })
   }
@@ -33,7 +33,7 @@ function Dashboard({ isSmallScreen, isHiddenDashboard, changeVisibleDashboard })
 
       <img src={Logo} alt="Логотип BankDash." className='dashboard__logo' />
 
-      <button className='dashboard__button-close' onClick={changeVisibleDashboard} />
+      {isSmallScreen && <button className='dashboard__button-close' onClick={changeVisibleDashboard} />}
 
       <nav>
         <ul className='dashboard__list'>
@@ -42,9 +42,9 @@ function Dashboard({ isSmallScreen, isHiddenDashboard, changeVisibleDashboard })
               <li
                 onClick={handleOnClickListItem}
                 key={item.name}
-                className={`dashboard__list-item ${currentMainSegment === item.href ? 'dashboard__list-item_active' : ''}`}
+                className={`dashboard__list-item ${sidebarSegment === item.href ? 'dashboard__list-item_active' : ''}`}
               >
-                <a className={`dashboard__link ${currentMainSegment === item.href ? 'dashboard__link_active' : ''}`} id={item.id} href={item.href}>
+                <a className={`dashboard__link ${sidebarSegment === item.href ? 'dashboard__link_active' : ''}`} id={item.id} href={item.href}>
                   {item.name}
                 </a>
               </li>
