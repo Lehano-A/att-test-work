@@ -59,11 +59,9 @@
       height: 38.64px;
 
       &::before {
-        width: 18.55px;
-        height: 18.55px;
-        background-size: cover;
-        margin-top: 1px;
-        // bottom: 0px;
+        width: 18px;
+        height: 18px;
+        margin: 1px 0 0 1px;
       }
     }
 
@@ -149,6 +147,7 @@
       &::before {
         width: 15px;
         height: 15px;
+        margin: 0;
       }
     }
 
