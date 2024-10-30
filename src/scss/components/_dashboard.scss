@@ -1,8 +1,12 @@
 @use '../palette/palette' as *;
-@use '../abstracts//mixins/all' as *;
+@use '../abstracts/mixins/all' as *;
 
 .dashboard {
   background-color: $white;
+
+  &__wrapper {
+    width: 249px;
+  }
 
   &__logo {
     width: 183px;
@@ -130,11 +134,12 @@
 
 @media screen and (min-width: 375px) {
   .dashboard {
-   display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     border-right: none;
+    width: 100%;
+    margin: 0 auto;
 
     &_hidden {
       display: none;
@@ -144,6 +149,7 @@
 
 @media screen and (min-width: 1024px) {
   .dashboard {
+    align-items: start;
     width: 249px;
     border-right: 1px $gray-300 solid;
   }

@@ -35,38 +35,40 @@ function Dashboard({
     <aside
       className={`dashboard ${isSmallScreen && isHiddenDashboard ? 'dashboard_hidden' : ''}`}
     >
-      <img
-        src={Logo}
-        alt='Логотип BankDash.'
-        className='dashboard__logo'
-      />
-
-      {isSmallScreen && (
-        <button
-          className='dashboard__button-close'
-          onClick={changeVisibleDashboard}
+      <div className='dashboard__wrapper'>
+        <img
+          src={Logo}
+          alt='Логотип BankDash.'
+          className='dashboard__logo'
         />
-      )}
 
-      <nav>
-        <ul className='dashboard__list'>
-          {links.map((item) => (
-            <li
-              onClick={handleOnClickListItem}
-              key={item.name}
-              className={`dashboard__list-item ${sidebarSegment === item.href ? 'dashboard__list-item_active' : ''}`}
-            >
-              <a
-                className={`dashboard__link ${sidebarSegment === item.href ? 'dashboard__link_active' : ''}`}
-                id={item.id}
-                href={item.href}
+        {isSmallScreen && (
+          <button
+            className='dashboard__button-close'
+            onClick={changeVisibleDashboard}
+          />
+        )}
+
+        <nav>
+          <ul className='dashboard__list'>
+            {links.map((item) => (
+              <li
+                onClick={handleOnClickListItem}
+                key={item.name}
+                className={`dashboard__list-item ${sidebarSegment === item.href ? 'dashboard__list-item_active' : ''}`}
               >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+                <a
+                  className={`dashboard__link ${sidebarSegment === item.href ? 'dashboard__link_active' : ''}`}
+                  id={item.id}
+                  href={item.href}
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </aside>
   );
 }
