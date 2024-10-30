@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ContentView from '../ContentView/ContentView';
 
 function Main() {
@@ -7,6 +8,6 @@ function Main() {
       <ContentView />
     </main>
   );
-};
+}
 
 export default Main;

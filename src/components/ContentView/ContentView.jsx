@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SettingPage from '../pages/SettingPage';
 
 function ContentView() {
@@ -7,6 +8,6 @@ function ContentView() {
       <SettingPage />
     </div>
   );
-};
+}
 
 export default ContentView;
