@@ -18,39 +18,22 @@ function FormEditProfile() {
       </div>
 
       <div className='form-edit-profile__inputs-box'>
-        <label id='yourName'>
+        <label>
           Your Name
           <input defaultValue='Charlene Reed' />
         </label>
 
-        <label id='email'>
-          Email
-          <input defaultValue='charlenereed@gmail.com' />
-        </label>
-
-        <label id='dateOfBirth'>
-          Date of Birth
-          <select>
-            <option value='25 January 1990'>25 January 1990</option>
-          </select>
-        </label>
-
-        <label id='permanentAddress'>
-          Permanent Address
-          <input defaultValue='San Jose, California, USA' />
-        </label>
-
-        <label id='postalCode'>
-          Postal Code
-          <input defaultValue='45962' />
-        </label>
-
-        <label id='userName'>
+        <label>
           User Name
           <input defaultValue='Charlene Reed ' />
         </label>
 
-        <label id='password'>
+        <label>
+          Email
+          <input defaultValue='charlenereed@gmail.com' />
+        </label>
+
+        <label>
           Password
           <input
             defaultValue='**********'
@@ -59,17 +42,34 @@ function FormEditProfile() {
           />
         </label>
 
-        <label id='presentAddress'>
+        <label>
+          Date of Birth
+          <select>
+            <option value='25 January 1990'>25 January 1990</option>
+          </select>
+        </label>
+
+        <label>
           Present Address
           <input defaultValue='San Jose, California, USA' />
         </label>
 
-        <label id='city'>
+        <label>
+          Permanent Address
+          <input defaultValue='San Jose, California, USA' />
+        </label>
+
+        <label>
           City
           <input defaultValue='San Jose' />
         </label>
 
-        <label id='country'>
+        <label>
+          Postal Code
+          <input defaultValue='45962' />
+        </label>
+
+        <label>
           Country
           <input defaultValue='USA' />
         </label>

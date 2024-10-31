@@ -68,56 +68,6 @@
     &__inputs-box {
       grid-template-columns: 1fr;
       row-gap: 16px;
-
-      & > #yourName {
-        grid-column: 1;
-        grid-row: 1;
-      }
-
-      & > #email {
-        grid-column: 1;
-        grid-row: 3;
-      }
-
-      & > #dateOfBirth {
-        grid-column: 1;
-        grid-row: 5;
-      }
-
-      & > #permanentAddress {
-        grid-column: 1;
-        grid-row: 7;
-      }
-
-      & > #postalCode {
-        grid-column: 1;
-        grid-row: 9;
-      }
-
-      & > #userName {
-        grid-column: 1;
-        grid-row: 2;
-      }
-
-      & > #password {
-        grid-column: 1;
-        grid-row: 4;
-      }
-
-      & > #presentAddress {
-        grid-column: 1;
-        grid-row: 6;
-      }
-
-      & > #city {
-        grid-column: 1;
-        grid-row: 8;
-      }
-
-      & > #country {
-        grid-column: 1;
-        grid-row: 10;
-      }
     }
   }
 }
@@ -154,56 +104,6 @@
     &__inputs-box {
       grid-template-columns: repeat(2, 1fr);
       gap: 22px 29px;
-
-      & > #yourName {
-        grid-column: 1;
-        grid-row: 1;
-      }
-
-      & > #email {
-        grid-column: 1;
-        grid-row: 2;
-      }
-
-      & > #dateOfBirth {
-        grid-column: 1;
-        grid-row: 3;
-      }
-
-      & > #permanentAddress {
-        grid-column: 1;
-        grid-row: 4;
-      }
-
-      & > #postalCode {
-        grid-column: 1;
-        grid-row: 5;
-      }
-
-      & > #userName {
-        grid-column: 2;
-        grid-row: 1;
-      }
-
-      & > #password {
-        grid-column: 2;
-        grid-row: 2;
-      }
-
-      & > #presentAddress {
-        grid-column: 2;
-        grid-row: 3;
-      }
-
-      & > #city {
-        grid-column: 2;
-        grid-row: 4;
-      }
-
-      & > #country {
-        grid-column: 2;
-        grid-row: 5;
-      }
     }
   }
 }
