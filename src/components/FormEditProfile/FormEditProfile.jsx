@@ -10,7 +10,7 @@ function FormEditProfile() {
         <img
           className='form-edit-profile__avatar'
           src={avatarImage}
-        ></img>
+        />
         <button
           className='form-edit-profile__button-edit-avatar'
           type='button'
