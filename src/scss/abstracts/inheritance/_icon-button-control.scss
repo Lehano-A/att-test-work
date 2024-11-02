@@ -1,6 +1,6 @@
 @use '../../palette/palette' as *;
 
-@mixin icon-button-control {
+%icon-button-control {
   content: '';
   display: inline-block;
   width: 100%;

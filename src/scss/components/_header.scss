@@ -1,5 +1,5 @@
 @use '../palette/palette' as *;
-@use '../abstracts/mixins/all' as *;
+@use '../abstracts/inheritance/all' as *;
 
 $position-icon-button-control: calc(50% - 1px);
 
@@ -75,7 +75,7 @@ $position-icon-button-control: calc(50% - 1px);
 
     &_setting {
       &::before {
-        @include icon-button-control;
+        @extend %icon-button-control;
         background-image: url('../../images/Components/Header/setting-1.svg');
         background-position: $position-icon-button-control
           $position-icon-button-control;
@@ -83,7 +83,7 @@ $position-icon-button-control: calc(50% - 1px);
     }
     &_notification {
       &::before {
-        @include icon-button-control;
+        @extend %icon-button-control;
         background-image: url('../../images/Components/Header/notification-1.svg');
         background-position-y: $position-icon-button-control;
       }
