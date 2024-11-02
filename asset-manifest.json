@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/att-test-work/static/css/main.d15df362.css",
+    "main.css": "/att-test-work/static/css/main.1b1dcf13.css",
     "main.js": "/att-test-work/static/js/main.34102f17.js",
     "static/media/Inter-SemiBold.woff": "/att-test-work/static/media/Inter-SemiBold.7f6c3678e245486167d9.woff",
     "static/media/Inter-Medium.woff": "/att-test-work/static/media/Inter-Medium.44e343ff76a98508d309.woff",
@@ -27,11 +27,11 @@
     "static/media/magnifying-glass-1.svg": "/att-test-work/static/media/magnifying-glass-1.b77e3f5c184411c17e9e.svg",
     "static/media/close.svg": "/att-test-work/static/media/close.7f59e1da9732ceff879d.svg",
     "static/media/arrow-1.svg": "/att-test-work/static/media/arrow-1.007687d741aa46a3921b.svg",
-    "main.d15df362.css.map": "/att-test-work/static/css/main.d15df362.css.map",
+    "main.1b1dcf13.css.map": "/att-test-work/static/css/main.1b1dcf13.css.map",
     "main.34102f17.js.map": "/att-test-work/static/js/main.34102f17.js.map"
   },
   "entrypoints": [
-    "static/css/main.d15df362.css",
+    "static/css/main.1b1dcf13.css",
     "static/js/main.34102f17.js"
   ]
 }
